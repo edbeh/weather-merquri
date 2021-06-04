@@ -1,0 +1,20 @@
+@import "../../assets//variables.css";
+
+.icon-button {
+  background-color: var(--lightGray);
+  padding: 7.5px;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.icon-button:first-child {
+  margin-right: 5px;
+}
+
+.icon-button img {
+  max-width: 15px;
+  max-height: 15px;
+}

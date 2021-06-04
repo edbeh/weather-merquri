@@ -1,0 +1,34 @@
+@import "../../../assets/variables.css";
+
+.history-item-container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid var(--lightGray);
+  align-items: center;
+  margin: 10px 0;
+}
+
+.history-item-container .history-item-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 5px;
+}
+
+.history-item-container .history-item-actions {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 450px) {
+  .history-item-container .history-item-details {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .history-item-container .history-item-details p {
+    margin: 2px 0;
+  }
+}

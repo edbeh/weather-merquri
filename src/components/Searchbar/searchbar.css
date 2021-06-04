@@ -1,0 +1,47 @@
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.searchbar .input-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchbar .button-group {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 780px) {
+  .searchbar .input-group {
+    width: 100%;
+  }
+
+  .searchbar .input-group form {
+    width: 50%;
+  }
+
+  .searchbar .input-group .country-selector-container {
+    width: 50%;
+  }
+
+  .searchbar .button-group {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .searchbar .input-group {
+    flex-direction: column;
+  }
+
+  .searchbar .input-group form {
+    width: 100%;
+  }
+
+  .searchbar .input-group .country-selector-container {
+    width: calc(100% - 10px);
+  }
+}

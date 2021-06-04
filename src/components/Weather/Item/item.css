@@ -1,0 +1,6 @@
+.weather-item span:first-child {
+  color: gray;
+  padding: 5px 0;
+  display: inline-block;
+  min-width: 150px;
+}

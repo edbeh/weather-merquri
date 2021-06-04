@@ -1,0 +1,17 @@
+.app {
+  padding: 10px 15px;
+  min-height: 100vh;
+  color: black;
+}
+
+.app.dark {
+  background-color: #282c34;
+}
+
+.app.dark h1,
+.app.dark h2,
+.app.dark p,
+.app.dark label,
+.app.dark span {
+  color: white;
+}
