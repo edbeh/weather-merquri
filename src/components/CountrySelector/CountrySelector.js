@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import Select from "react-select";
 import countryList from "react-select-country-list";
 
@@ -20,5 +21,10 @@ function CountrySelector({ country, handleChange }) {
     </div>
   );
 }
+
+CountrySelector.propTypes = {
+  country: PropTypes.string,
+  handleChange: PropTypes.func.isRequired,
+};
 
 export default CountrySelector;

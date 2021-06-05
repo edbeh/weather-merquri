@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import IconButton from "../../IconButton/IconButton";
 import searchIcon from "../../../assets/images/search.png";
@@ -27,6 +28,15 @@ const HistoryItem = ({
       </div>
     </div>
   );
+};
+
+HistoryItem.propTypes = {
+  city: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
+  timestamp: PropTypes.string.isRequired,
+  index: PropTypes.number.isRequired,
+  handleRefetchLocation: PropTypes.func.isRequired,
+  handleDeleteHistory: PropTypes.func.isRequired,
 };
 
 export default HistoryItem;

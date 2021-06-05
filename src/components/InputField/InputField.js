@@ -10,7 +10,6 @@ const InputField = ({
   onChange,
   className,
   value,
-  error,
   children,
   label,
   ...props
@@ -26,10 +25,8 @@ const InputField = ({
         onChange={onChange}
         value={value}
         className={className}
-        style={error && { border: "solid 1px red" }}
         {...props}
       />
-      {error && <p>{error}</p>}
     </div>
   );
 };
@@ -41,11 +38,16 @@ InputField.defaultProps = {
 
 InputField.propTypes = {
   name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
   type: PropTypes.oneOf(["text", "number", "password"]),
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
   className: PropTypes.string,
   value: PropTypes.any,
-  onChange: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  label: PropTypes.string.isRequired,
 };
 
 export default InputField;

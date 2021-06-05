@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import InputField from "../InputField/InputField";
 import CountrySelector from "../CountrySelector/CountrySelector";
@@ -38,17 +39,26 @@ const Searchbar = ({
       <div className="button-group">
         <CustomButton
           text="Search"
-          onClick={handleSearch}
+          handleClick={handleSearch}
           disabled={!city && !country}
         />
         <CustomButton
           text="Clear"
-          onClick={handleClear}
+          handleClick={handleClear}
           disabled={!city && !country}
         />
       </div>
     </div>
   );
+};
+
+Searchbar.propTypes = {
+  country: PropTypes.string,
+  city: PropTypes.string,
+  handleCityChange: PropTypes.func.isRequired,
+  handleCountryChange: PropTypes.func.isRequired,
+  handleSearch: PropTypes.func.isRequired,
+  handleClear: PropTypes.func.isRequired,
 };
 
 export default Searchbar;

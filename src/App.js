@@ -23,7 +23,6 @@ function App() {
   const [weatherIcon, setWeatherIcon] = useState(null);
   const [searchHistory, setSearchHistory] = useState([]);
   const [error, setError] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleChangeTheme = () => {
     if (theme === "light") {
@@ -41,18 +40,16 @@ function App() {
     setCountry(value);
   };
 
+  // refactored function to group fetch weather states together
   const handleFetchWeather = async (city, country) => {
     try {
       setWeatherIcon(null);
       setWeather(null);
       setError(null);
-      setIsLoading(true);
       const weatherData = await fetchWeather(city, country);
       setWeather(weatherData);
-      setIsLoading(false);
     } catch (err) {
       setError(capitalizeFirstLetter(err.message));
-      setIsLoading(false);
     }
   };
 
@@ -69,6 +66,7 @@ function App() {
     setCountry(null);
   };
 
+  // fetch weather icon in a follow up API call after getting weather information
   const handleFetchIcon = async (code) => {
     const icon = await fetchWeatherIcon(code);
     setWeatherIcon(icon);

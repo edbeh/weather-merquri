@@ -26,6 +26,7 @@
   .history-item-container .history-item-details {
     flex-direction: column;
     margin-left: 10px;
+    padding-bottom: 10px;
   }
 
   .history-item-container .history-item-details p {

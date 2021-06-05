@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Header from "../Header/Header";
 import HistoryItem from "./HistoryItem/HistoryItem";
@@ -30,6 +31,12 @@ const SearchHistory = ({
       })}
     </div>
   );
+};
+
+SearchHistory.propTypes = {
+  searchHistory: PropTypes.array.isRequired,
+  handleRefetchLocation: PropTypes.func.isRequired,
+  handleDeleteHistory: PropTypes.func.isRequired,
 };
 
 export default SearchHistory;
