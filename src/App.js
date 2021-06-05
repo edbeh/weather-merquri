@@ -95,7 +95,7 @@ function App() {
         id: uuidv4(),
         city: weather.name,
         country: weather.sys.country,
-        timestamp: moment().format("YYYY-MM-DD hh:mm A"),
+        timestamp: moment().format("YYYY-MM-DD hh:mm:ss A"),
       };
 
       setSearchHistory([historyObject, ...searchHistory]);
